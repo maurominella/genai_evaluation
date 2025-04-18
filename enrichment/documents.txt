@@ -1,4 +1,4 @@
-Bullet Kin
+"Bullet Kin
 Bullet Kin are one of the most common enemies. They slowly walk towards the player, occasionally firing a single bullet. They can flip tables and use them as cover. They will also deal contact damage if the player touches them.
 
 Occasionally, Bullet Kin will have assault rifles, in which case they will rapidly fire 8 bullets towards the player before reloading. When an assault rifle wielding bullet kin appears, there will often be more in the same room.
@@ -9371,4 +9371,4 @@ Honglei Zhuang, Zhen Qin, Rolf Jagerman, Kai Hui,
 Ji Ma, Jing Lu, Jianmo Ni, Xuanhui Wang, and
 Michael Bendersky. 2023. Rankt5: Fine-Tuning T5
 for Text Ranking with Ranking Losses. In Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information
-Retrieval. ACM.
+Retrieval. ACM."
