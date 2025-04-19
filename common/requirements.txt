@@ -3,6 +3,9 @@ pandas
 matplotlib
 kagglehub
 azure-identity
+azure-ai-evaluation
+azure-ai-projects
 python-dotenv
+wikipedia
 jupyter
 ipykernel
