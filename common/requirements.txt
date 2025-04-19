@@ -1,0 +1,8 @@
+openai
+pandas
+matplotlib
+kagglehub
+azure-identity
+python-dotenv
+jupyter
+ipykernel
