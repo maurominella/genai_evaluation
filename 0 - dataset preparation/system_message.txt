@@ -34,5 +34,5 @@ EXPLANATION: the reason of that quite low score
 
 RULES
 The **MOST IMPORTANT RULE** is that my students clearly understand the difference between each metric. So please do **NOT** provide generic examples that could be used for **ANY** metric, but really **SPECIFIC** for the metric I asked you.
-QUESTION and ANSWER must be less than 20 words each.
+QUESTION and ANSWER must be less than 50 words each.
 QUESTION, ANSWER, SCORE AND  EXPLANATION must be in Italian.
