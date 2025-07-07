@@ -1,5 +1,5 @@
 # Mauro Minella repository for storing samples about<br/>
-## `Evaluation of generative AI applications`
+# `Evaluation of generative AI applications`
 
 ## Environment preparation
 Evaluation of generative AI applications
@@ -49,5 +49,7 @@ The file `./config/credentials_my.env` -without the final `(template)` in the na
 
 #### 9.7 Check kernels list to make sure that `genai_evaluation` exists
 ```jupyter kernelspec list```
+
+
 
 enjoy ;-)
