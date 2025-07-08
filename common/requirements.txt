@@ -10,3 +10,4 @@ python-dotenv
 wikipedia
 jupyter
 ipykernel
+semantic-kernel
