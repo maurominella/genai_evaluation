@@ -1,0 +1,34 @@
+---
+name: ApplicationPrompty
+description: Chat RAG application
+model:
+    api: chat
+    parameters:
+        temperature: 0.0
+        top_p: 1.0
+        presence_penalty: 0
+        frequency_penalty: 0
+        response_format:
+            type: text
+
+inputs:
+    context:
+        type: string
+    query:
+        type: string
+    conversation_history:
+        type: dict
+---
+system:
+You are a helpful assistant and you're helping with the user's query. 
+Keep the conversation engaging and interesting.
+
+Keep your conversation grounded in the provided context: 
+{{ context }}
+
+Output with a string that continues the conversation, responding to 
+the latest message from the user query using it same language:
+{{ query }}
+
+given the conversation history:
+{{ conversation_history }}
