@@ -33,7 +33,7 @@ The file `./config/credentials_my.env` -without the final `(template)` in the na
 ```conda env remove -n genai_evaluation_conda -y```
 
 #### 9.2 Create new Conda Environment `genai_evaluation_conda` with Python 3.11
-```conda create -n genai_evaluation_conda python=3.13 -y```
+```conda create -n genai_evaluation_conda python=3.11 -y```
 
 #### 9.3 Activate the `genai_evaluation_conda` environment
 ```conda activate genai_evaluation_conda```
