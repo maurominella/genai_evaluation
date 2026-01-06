@@ -1,0 +1,21 @@
+[project]
+name = "genai-evaluation"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "azure-ai-evaluation>=1.13.7",
+    "azure-ai-ml>=1.31.0",
+    "azure-ai-projects>=1.0.0",
+    "azure-identity>=1.25.1",
+    "ipykernel>=7.1.0",
+    "jupyter>=1.1.1",
+    "kagglehub>=0.3.13",
+    "matplotlib>=3.10.8",
+    "openai>=2.14.0",
+    "pandas>=2.3.3",
+    "python-dotenv>=1.2.1",
+    "semantic-kernel>=1.36.0",
+    "wikipedia>=1.4.0",
+]

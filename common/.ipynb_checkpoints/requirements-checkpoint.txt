@@ -1,0 +1,13 @@
+openai
+pandas
+matplotlib
+kagglehub
+azure-identity
+azure-ai-evaluation
+azure-ai-projects
+azure.ai.ml
+python-dotenv
+wikipedia
+jupyter
+ipykernel
+semantic-kernel
