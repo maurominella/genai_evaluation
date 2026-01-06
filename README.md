@@ -29,25 +29,25 @@ The file `./config/credentials_my.env` -without the final `(template)` in the na
 
 ### 9. Environment provisioning for Azure AI Agent Service (`genai_evaluation`)
 
-#### 9.1 Remove the pre-existing conda `genai_evaluation` environment (if exists)
-```conda env remove -n genai_evaluation -y```
+#### 9.1 Remove the pre-existing conda `genai_evaluation_conda` environment (if exists)
+```conda env remove -n genai_evaluation_conda -y```
 
-#### 9.2 Create new Conda Environment `genai_evaluation` with Python 3.13
-```conda create -n genai_evaluation python=3.13 -y```
+#### 9.2 Create new Conda Environment `genai_evaluation_conda` with Python 3.11
+```conda create -n genai_evaluation_conda python=3.13 -y```
 
-#### 9.3 Activate the `genai_evaluation` environment
-```conda activate genai_evaluation```
+#### 9.3 Activate the `genai_evaluation_conda` environment
+```conda activate genai_evaluation_conda```
 
 #### 9.4 Install libraries and dependencies
 ```pip install -r ./common/requirements.txt```
 
-#### 9.5 Remove `genai_evaluation` kernel (if exists)
-```jupyter kernelspec uninstall genai_evaluation -y```
+#### 9.5 Remove `genai_evaluation_conda` kernel (if exists)
+```jupyter kernelspec uninstall genai_evaluation_conda -y```
 
-#### 9.6 Create `genai_evaluation` kernel 
-```python -m ipykernel install --name genai_evaluation --user```
+#### 9.6 Create `genai_evaluation_conda` kernel 
+```python -m ipykernel install --name genai_evaluation_conda --user```
 
-#### 9.7 Check kernels list to make sure that `genai_evaluation` exists
+#### 9.7 Check kernels list to make sure that `genai_evaluation_conda` exists
 ```jupyter kernelspec list```
 
 
