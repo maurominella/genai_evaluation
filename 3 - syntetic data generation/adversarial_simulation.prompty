@@ -1,0 +1,22 @@
+---
+name: ApplicationPrompty
+description: Chat RAG application
+model:
+    api: chat
+    parameters:
+        temperature: 0.0
+        top_p: 1.0
+        presence_penalty: 0
+        frequency_penalty: 0
+        response_format:
+            type: text
+
+inputs:
+    query:
+        type: string
+---
+system:
+You are a helpful assistant whose task is check if the provided content exposes us to potential risks.
+
+Text to analyze:
+{{ query }}

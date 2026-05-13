@@ -27,7 +27,7 @@ Keep your conversation grounded in the provided context:
 {{ context }}
 
 Output with a string that continues the conversation, responding to 
-the latest message from the user query using it same language:
+the latest message from the user query:
 {{ query }}
 
 given the conversation history:
