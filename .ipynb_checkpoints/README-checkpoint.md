@@ -23,33 +23,77 @@ The file `./config/credentials_my.env` -without the final `(template)` in the na
 ### 6. ***CD*** into `genai_evaluation` folder of the cloned repository
 ```cd genai_evaluation```
 
-### 7. Install Miniconda from its [WEB site](https://www.anaconda.com/docs/getting-started/miniconda/install), choosing your operating system
+### 7 **UV** installation (Python package & project manager)
 
-### 8. Open Miniconda bash / prompt, or make sure that conda executable is in the path
+- **Linux / macOS:**
+  ```bash
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+  ```
+- **Windows (PowerShell):**
+  ```powershell
+  powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+  ```
 
-### 9. Environment provisioning for Azure AI Agent Service (`genai_evaluation`)
 
-#### 9.1 Remove the pre-existing conda `genai_evaluation_conda` environment (if exists)
-```conda env remove -n genai_evaluation_conda -y```
+### 8. Verify that UV executable is in the path and runnable
 
-#### 9.2 Create new Conda Environment `genai_evaluation_conda` with Python 3.11
-```conda create -n genai_evaluation_conda python=3.11 -y```
+Verify: `uv --version`. (uv also installs and manages Python for you — you do **not** need a separate Python install).
 
-#### 9.3 Activate the `genai_evaluation_conda` environment
-```conda activate genai_evaluation_conda```
 
-#### 9.4 Install libraries and dependencies
-```pip install -r ./common/requirements.txt```
 
-#### 9.5 Remove `genai_evaluation_conda` kernel (if exists)
-```jupyter kernelspec uninstall genai_evaluation_conda -y```
+### 9. Create your Python Environment with UV
 
-#### 9.6 Create `genai_evaluation_conda` kernel 
-```python -m ipykernel install --name genai_evaluation_conda --user```
+```bash
+# 1. Make sure you are in the right folder
 
-#### 9.7 Check kernels list to make sure that `genai_evaluation_conda` exists
-```jupyter kernelspec list```
+# 2. Initialise a uv project on Python 3.13
+uv init . --python 3.13
 
+# 3. Create the local virtual environment
+uv venv
+
+# 4. Activate it
+source .venv/bin/activate        # Linux / macOS
+.\.venv\Scripts\Activate.ps1   # Windows (PowerShell)
+
+# 5. Install the dependencies (note --active + --prerelease=allow)
+uv add --active -r requirements.txt --prerelease=allow
+
+# 6. Confirm what got installed
+uv pip list
+
+# 7. (Only when a pyproject.toml already exists) sync the environment
+uv sync --active --prerelease=allow
+
+# 8. Deactivate when finished
+deactivate
+```
+
+> [!NOTE]
+> **Why `--prerelease=allow`** — some libraries (e.g. the Microsoft **Agent Framework**) ship as preview releases; this flag lets uv install them. **Why `--active`** — it tells uv to use the virtual environment you just activated.
+
+> [!TIP]
+> Alternative to the activate/`--active` flow: prefix any command with `uv run` (e.g. `uv run python app.py`) and uv uses the project environment automatically. Both styles work — pick one and stay consistent.
+
+
+### 10. Jupyter kernel (only for notebook exercises)
+
+Some exercises are delivered as Jupyter notebooks. Register a kernel so VS Code / Jupyter can select this environment. Use a name you'll recognise (for example: `genai_evaluation`).
+
+```bash
+# Register the current environment as a kernel
+python -m ipykernel install --user --name genai_evaluation --display-name "Generative AI Evaluation (uv)"
+
+# List installed kernels
+jupyter kernelspec list
+
+# Remove a kernel when no longer needed
+jupyter kernelspec uninstall ai-labs
+```
+
+In VS Code, open the notebook → **Select Kernel** → choose **"Generative AI Evaluation (uv)"**.
+
+---
 
 
 enjoy ;-)

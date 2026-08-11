@@ -27,4 +27,5 @@ azure-ai-evaluation==1.18.3
 # --- Common utilities (campaign data, readable output, .env variables) ---
 python-dotenv==1.2.2
 jupyter==1.1.1
+kagglehub
 # rich==15.0.0
