@@ -68,6 +68,48 @@ def prepare_ground_truth_and_response(file_path:str = "response_completeness_dat
             file.write(json.dumps(line) + "\n")
 
 
+def prepare_query_context_response(file_path:str = "groundedness_data.jsonl"):
+    """
+    Prepare query, context and response for evaluation.
+    This function can be modified to preprocess the inputs as needed.
+    """
+    import json
+    from pathlib import Path
+
+    data = [
+        {
+            "query": "Which tent is the most waterproof?",
+            "context": "The Alpine Explorer Tent is the second most water-proof of all tents available.",
+            "response": "The Alpine Explorer Tent is the most waterproof.",
+        },
+        {
+            "query": "What is the return period for an unopened tent?",
+            "context": "Unopened tents may be returned within 30 days of purchase for a full refund.",
+            "response": "An unopened tent can be returned within 30 days for a full refund.",
+        },
+        {
+            "query": "What features does the Trail Breeze Tent include?",
+            "context": "The Trail Breeze Tent sleeps four people and includes two doors and a mesh roof.",
+            "response": "The Trail Breeze Tent sleeps four people and has two doors.",
+        },
+        {
+            "query": "Is the Summit Dome Tent suitable for winter camping?",
+            "context": "The Summit Dome Tent is a lightweight three-season tent designed for spring, summer, and fall.",
+            "response": "Yes. Its insulated walls and snow skirt make it ideal for severe winter conditions.",
+        },
+        {
+            "query": "How much does the River Camp Tent weigh?",
+            "context": "The River Camp Tent has a floor area of 45 square feet and accommodates three campers.",
+            "response": "The River Camp Tent weighs 6.5 pounds.",
+        },
+    ]
+
+    with Path.open(file_path, "w") as file:
+        for line in data:
+            file.write(json.dumps(line) + "\n")
+
+
+
 def batch_evaluation(
         eval_name: str,
         eval_object,
