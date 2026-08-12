@@ -2,33 +2,35 @@
 name: ApplicationPrompty
 description: Chat RAG application
 model:
-    api: chat
-    parameters:
+    id: ${env:AZURE_OPENAI_CHAT_DEPLOYMENT_NAME}
+    provider: foundry
+    connection:
+        kind: foundry
+        endpoint: ${env:FOUNDRY_PROJECT_ENDPOINT}
+    options:
         temperature: 0.0
         top_p: 1.0
-        presence_penalty: 0
-        frequency_penalty: 0
-        response_format:
-            type: text
-
 inputs:
-    context:
-        type: string
-    query:
-        type: string
-    conversation_history:
-        type: dict
+    - name: context
+      kind: string
+    - name: query
+      kind: string
+    - name: conversation_history
+      kind: thread
+template:
+    format:
+        kind: jinja2
+    parser:
+        kind: prompty
 ---
 system:
-You are a helpful assistant and you're helping with the user's query. 
+You are a helpful assistant and you're helping with the user's query.
 Keep the conversation engaging and interesting.
+{{ conversation_history }}
 
-Keep your conversation grounded in the provided context: 
+user:
+Keep your answer grounded in the provided context:
 {{ context }}
 
-Output with a string that continues the conversation, responding to 
-the latest message from the user query:
+Continue the conversation by responding to this query:
 {{ query }}
-
-given the conversation history:
-{{ conversation_history }}
