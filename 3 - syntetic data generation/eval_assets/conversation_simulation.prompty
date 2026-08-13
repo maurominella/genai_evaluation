@@ -1,6 +1,6 @@
 ---
-name: ApplicationPrompty
-description: Chat RAG application
+name: ConversationSimulationPrompty
+description: Chat application for simulating a conversatation
 model:
     id: ${env:AZURE_OPENAI_CHAT_DEPLOYMENT_NAME}
     provider: foundry
