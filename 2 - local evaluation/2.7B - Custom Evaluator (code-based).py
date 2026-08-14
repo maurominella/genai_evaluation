@@ -71,15 +71,9 @@ def grade(sample: dict, item: dict) -> float:
                         },
                         "data_schema": {
                             "type": "object",
-                            "required": ["item"],
+                            "required": ["answer"],
                             "properties": {
-                                "item": {
-                                    "type": "object",
-                                    "properties": {
-                                        "answer": {"type": "string"},
-                                    },
-                                    "required": ["answer"],
-                                }
+                                "answer": {"type": "string"},
                             },
                         },
                         "metrics": {
