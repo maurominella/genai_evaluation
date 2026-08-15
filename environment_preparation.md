@@ -1,5 +1,3 @@
-# `Evaluation of generative AI applications`
-
 ## Environment preparation
 
 1. Install Git from its [WEB site](https://git-scm.com/downloads), choosing your operating system
@@ -14,7 +12,9 @@ If you do not have one, you may create a folder called `git_repos`
 
 5. Create a sub-folder of the base `git_repos` called `config` if it does not exist yet
 **Before** moving into this folder, just copy the file `credentials_my(template).env` of the cloned repo into it:<br/>
-- ```cp "./genai_evaluation/credentials_my(template).env" ./config```
+```bash
+cp "./genai_evaluation/credentials_my(template).env" ./config
+```
 
 The file `./config/credentials_my.env` -without the final `(template)` in the name- will have to be updated with your own credentials in order to be shared among all repositories.
 
