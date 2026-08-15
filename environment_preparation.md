@@ -1,28 +1,27 @@
 # `Evaluation of generative AI applications`
 
 ## Environment preparation
-Evaluation of generative AI applications
 
-### 1. Install Git from its [WEB site](https://git-scm.com/downloads), choosing your operating system
+1. Install Git from its [WEB site](https://git-scm.com/downloads), choosing your operating system
 
-### 2. Open a git/bash command prompt, or make sure that git executable is in the path
+2. Open a git/bash command prompt, or make sure that git executable is in the path
 
-### 3. ***CD*** into the base folder for your git repositories
+3. ***CD*** into the base folder for your git repositories
 If you do not have one, you may create a folder called `git_repos`
 
-### 4. Use `git` to clone this repo locally
+4. Use `git` to clone this repo locally
 ```git clone https://github.com/maurominella/genai_evaluation.git```
 
-### 5. Create a sub-folder of the base `git_repos` called `config` if it does not exist yet
+5. Create a sub-folder of the base `git_repos` called `config` if it does not exist yet
 **Before** moving into this folder, just copy the file `credentials_my(template).env` of the cloned repo into it:<br/>
 - ```cp "./genai_evaluation/credentials_my(template).env" ./config```
 
 The file `./config/credentials_my.env` -without the final `(template)` in the name- will have to be updated with your own credentials in order to be shared among all repositories.
 
-### 6. ***CD*** into `genai_evaluation` folder of the cloned repository
+6. ***CD*** into `genai_evaluation` folder of the cloned repository
 ```cd genai_evaluation```
 
-### 7 **UV** installation (Python package & project manager)
+7. **UV** installation (Python package & project manager)
 
 - **Linux / macOS:**
   ```bash
@@ -34,13 +33,13 @@ The file `./config/credentials_my.env` -without the final `(template)` in the na
   ```
 
 
-### 8. Verify that UV executable is in the path and runnable
+8. Verify that UV executable is in the path and runnable
 
 Verify: `uv --version`. (uv also installs and manages Python for you — you do **not** need a separate Python install).
 
 
 
-### 9. Create your Python Environment with UV
+9. Create your Python Environment with UV
 
 ```bash
 # 1. Make sure you are in the right folder
