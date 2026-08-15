@@ -76,7 +76,7 @@ deactivate
 > Alternative to the activate/`--active` flow: prefix any command with `uv run` (e.g. `uv run python app.py`) and uv uses the project environment automatically. Both styles work — pick one and stay consistent.
 
 
-### 10. Jupyter kernel (only for notebook exercises)
+### 10. Jupyter kernel (needed for notebook exercises)
 
 Some exercises are delivered as Jupyter notebooks. Register a kernel so VS Code / Jupyter can select this environment. Use a name you'll recognise (for example: `genai_evaluation`).
 
