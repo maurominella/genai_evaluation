@@ -16,8 +16,7 @@ or
 git clone git@github.com:maurominella/genai_evaluation.git
 ```
 
-5. ***CD*** into `genai_evaluation` folder of the cloned repository
-```cd genai_evaluation```
+5. ***CD*** into `genai_evaluation` folder of the cloned repository: `cd genai_evaluation`
 
 6. Duplicate the file `.env.example` into `credentials_my.env` and fill the right values into it.
 
