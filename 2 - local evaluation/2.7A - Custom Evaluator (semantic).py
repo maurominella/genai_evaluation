@@ -23,6 +23,10 @@ result = friendliness_eval(
     response="I'm very sorry. I'll be happy to help resolve this issue."
 )
 
+result = friendliness_eval(
+    response="I won't apologize for my behaviour!!"
+)
+
 print(result)
 # {"score": 5, "reason": "..."}
 

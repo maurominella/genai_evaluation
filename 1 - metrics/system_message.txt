@@ -26,7 +26,7 @@ For example:
 - if the score range goes from 1 to 5 where 1 is the lowest quality and 5 is the highest quality, please provide five answers for grades 5-4-3-2-1.
 - if the score range is a float [0-1] (higher means better quality), please provide just 3-4 answers e.g. for 0.9, 0.5 and 0.2.
 
-Here is the informatio to provide for each example:
+Here is the information to provide for each example:
 QUESTION: a sample question
 ANSWER: an answer to that question
 SCORE: the metric score
@@ -35,4 +35,3 @@ EXPLANATION: the reason of that quite low score
 RULES
 The **MOST IMPORTANT RULE** is that my students clearly understand the difference between each metric. So please do **NOT** provide generic examples that could be used for **ANY** metric, but really **SPECIFIC** for the metric I asked you.
 QUESTION and ANSWER must be less than 50 words each.
-QUESTION, ANSWER, SCORE AND  EXPLANATION must be in English.
