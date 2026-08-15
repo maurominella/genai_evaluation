@@ -56,14 +56,14 @@ uv venv
 source .venv/bin/activate        # Linux / macOS
 .\.venv\Scripts\Activate.ps1   # Windows (PowerShell)
 
-# 5. Install the dependencies (note --active + --prerelease=allow)
-uv add --active -r requirements.txt --prerelease=allow
+# 5. Install the shared dependencies (note --active + --prerelease=allow)
+uv add --active -r common/requirements.txt --prerelease=allow
 
 # 6. Confirm what got installed
 uv pip list
 
-# 7. (Only when a pyproject.toml already exists) sync the environment
-uv sync --active --prerelease=allow
+# 7. On subsequent runs, reproduce the committed environment exactly
+uv sync --active --frozen
 
 # 8. Deactivate when finished
 deactivate
