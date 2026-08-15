@@ -16,16 +16,10 @@ or
 git clone git@github.com:maurominella/genai_evaluation.git
 ```
 
-5. Create a sub-folder of the base `git_repos` called `config` if it does not exist yet
-**Before** moving into this folder, just copy the file `credentials_my(template).env` of the cloned repo into it:<br/>
-```bash
-cp "./genai_evaluation/credentials_my(template).env" ./config
-```
-
-The file `./config/credentials_my.env` -without the final `(template)` in the name- will have to be updated with your own credentials in order to be shared among all repositories.
-
-6. ***CD*** into `genai_evaluation` folder of the cloned repository
+5. ***CD*** into `genai_evaluation` folder of the cloned repository
 ```cd genai_evaluation```
+
+6. Duplicate the file `.env.example` into `credentials_my.env` and fill the right values into it.
 
 7. **UV** installation (Python package & project manager)
 
