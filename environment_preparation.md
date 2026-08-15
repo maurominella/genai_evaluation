@@ -1,4 +1,3 @@
-# Mauro Minella repository for storing samples about<br/>
 # `Evaluation of generative AI applications`
 
 ## Environment preparation
