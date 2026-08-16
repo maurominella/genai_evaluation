@@ -89,3 +89,9 @@ jupyter kernelspec uninstall ai-labs
 ```
 
 In VS Code, open the notebook → **Select Kernel** → choose **"Generative AI Evaluation (uv)"**.
+
+---
+
+To zip/unzip the labs folder:
+- `zip -r labs.zip samples/`
+- `unzip -o labs.zip`
